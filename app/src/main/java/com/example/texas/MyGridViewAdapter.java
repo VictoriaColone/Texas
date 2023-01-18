@@ -62,25 +62,19 @@ class MyGridViewAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         Holder holder;
         if (convertView == null) {
-
-
             convertView = LayoutInflater.from(context).inflate(R.layout.gridinfo, null);
             holder = new Holder();
             holder.tv = (TextView) convertView.findViewById(R.id.name);
             holder.img = (ImageView) convertView.findViewById(R.id.type);
-
             convertView.setTag(holder);
-
         } else {
             holder = (Holder) convertView.getTag();
         }
         holder.tv.setText(CardUtils.cardNames[position % 13]);
         holder.img.setImageResource(CardUtils.cardImageRes[position / 13]);
-
         if(data[position] == 0) {
             holder.tv.setVisibility(View.VISIBLE);
             holder.img.setVisibility(View.VISIBLE);
-
         } else {
             holder.tv.setVisibility(View.INVISIBLE);
             holder.img.setVisibility(View.INVISIBLE);

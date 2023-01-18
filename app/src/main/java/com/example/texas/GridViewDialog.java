@@ -15,6 +15,7 @@ public class GridViewDialog extends Dialog implements AdapterView.OnItemClickLis
     GridView gridView;
     MyGridViewAdapter gridViewAdapter;
     Context context;
+    private int position;
 
     public GridViewDialog(Context context) {
         super(context);
@@ -35,12 +36,9 @@ public class GridViewDialog extends Dialog implements AdapterView.OnItemClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.gridview);
-
-
         gridView = (GridView) findViewById(R.id.gridView);
         gridViewAdapter = new MyGridViewAdapter(context);
         gridView.setAdapter(gridViewAdapter);
-
         gridView.setOnItemClickListener(this);
     }
 
@@ -54,8 +52,6 @@ public class GridViewDialog extends Dialog implements AdapterView.OnItemClickLis
     public int getPosition() {
         return position;
     }
-
-    private int position;
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

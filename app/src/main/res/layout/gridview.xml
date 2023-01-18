@@ -16,5 +16,7 @@
         android:scrollbars="horizontal|vertical"
         android:horizontalSpacing="5dp"
         android:verticalSpacing="2dp"
-    />
+        >
+    </GridView>
+
 </RelativeLayout>

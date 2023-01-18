@@ -15,10 +15,6 @@ public class HEPoker extends Poker {
 		}
 	}
 	
-	//
-	// instance stuff
-	//
-	
 	/** must use 2 cards */
 	private final boolean omaha;
 	private final int min;
