@@ -1,2 +1,2 @@
 # Texas
-Texas Calculater
+Texas Calculater 概率计算器
